@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300&family=Inconsolata:wght@300&family=Open+Sans:wght@300&family=Roboto:wght@300&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  font-family: 'Inconsolata', monospace;
+}
+
+body .search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  padding: 20px 30px 0;
+}
+
+body .search input[type="search"] {
+  padding: 10px 25px;
+  border-radius: 26px;
+  border: none;
+  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.44);
+          box-shadow: 0 0 4px rgba(0, 0, 0, 0.44);
+}
+
+body .search input[type="search"]:focus {
+  outline: #3B71CA;
+}
+
+body .todo-list {
+  position: relative;
+  background: #EFF1F2;
+  width: 60%;
+  margin: 5% auto;
+  min-height: 50vh;
+  padding: 30px;
+}
+
+body .todo-list h1 {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bolder;
+  color: #3B71CA;
+}
+
+body .todo-list form {
+  width: 90%;
+  margin: 50px auto;
+}
+
+body .todo-list form input[type="text"] {
+  width: 100%;
+  padding: 20px;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.12);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.12);
+  border: none;
+  border-radius: 5px;
+}
+
+body .todo-list form input[type="text"]:focus {
+  outline: none;
+}
+
+body .todo-list form input[type="submit"] {
+  right: 2%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  padding: 5px 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #fff;
+  background: #3B71CA;
+  border: none;
+  border-radius: 5px;
+}
+
+body .todo-list form input[type="submit"]:focus {
+  outline: none;
+}
+
+body .todo-list .tasks {
+  width: 90%;
+  margin: 35px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+
+body .todo-list .tasks .task {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-shadow: 0 1px 10px 0px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 1px 10px 0px rgba(0, 0, 0, 0.15);
+  padding: 10px;
+  border-radius: 5px;
+  background: #fff;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .todo-list .tasks .task p {
+  margin: 0;
+}
+
+body .todo-list .tasks .task .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  cursor: pointer;
+}
+
+body .todo-list .tasks .task .icons .edit {
+  color: #3B71CA;
+}
+
+body .todo-list .tasks .task .icons .del {
+  color: #DC4C64;
+}
+
+body .todo-list .tasks .task.done {
+  color: #ccc;
+  text-decoration: line-through;
+  -webkit-text-decoration-color: currentcolor;
+          text-decoration-color: currentcolor;
+  -webkit-text-decoration-color: #3B71CA66;
+          text-decoration-color: #3B71CA66;
+}
+
+body .todo-list .edit-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: #fff;
+  padding: 20px;
+  -webkit-box-shadow: 0 0 4px black;
+          box-shadow: 0 0 4px black;
+  width: 50%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  display: none;
+}
+
+body .todo-list .edit-box input {
+  width: 100%;
+  padding: 10px;
+}
+
+/* For Tablet View */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .search {
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+  }
+  .todo-list {
+    width: 80% !important;
+  }
+}
+
+/* For Mobile Portrait View */
+@media screen and (max-width: 480px) and (orientation: portrait) {
+  .search {
+    background: #EFF1F2;
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+    padding: 30px !important;
+  }
+  .todo-list {
+    width: 100% !important;
+    margin: 0 auto !important;
+    min-height: 100vh !important;
+  }
+}
+/*# sourceMappingURL=style.css.map */

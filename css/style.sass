@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300&family=Inconsolata:wght@300&family=Open+Sans:wght@300&family=Roboto:wght@300&display=swap')
+
+//  COLORS
+$bg-color: #EFF1F2
+$white-color: #fff
+$blue-color: #3B71CA
+$red-color: #DC4C64
+
+body
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    // font-family: 'Roboto', sans-serif
+    user-select: none
+    font-family: 'Inconsolata', monospace
+    .search
+        display: flex
+        justify-content: end
+        padding: 20px 30px 0
+        input[type="search"]
+            padding: 10px 25px
+            border-radius: 26px
+            border: none
+            box-shadow: 0 0 4px rgba(0,0,0,0.44)
+            &:focus
+                outline: $blue-color
+    .todo-list
+        position: relative
+        background: $bg-color
+        width: 60%
+        margin: 5% auto
+        min-height: 50vh
+        padding: 30px
+        h1
+            text-align: center
+            font-size: 3rem
+            font-weight: bolder
+            color: $blue-color
+        form
+            width: 90%
+            margin: 50px auto
+            input[type="text"]
+                width: 100%
+                padding: 20px
+                box-shadow: 0 0 5px rgba(0 , 0 , 0 , 0.12)
+                border: none
+                border-radius: 5px
+                &:focus
+                    outline: none
+            input[type="submit"]
+                right: 2%
+                top: 50%
+                transform: translateY(-50%)
+                padding: 5px 20px
+                text-transform: uppercase
+                font-weight: bold
+                color: #fff
+                background: $blue-color
+                border: none
+                border-radius: 5px
+                &:focus
+                    outline: none
+        .tasks
+            width: 90%
+            margin: 35px auto
+            display: flex
+            flex-direction: column
+            gap: 20px
+            .task
+                display: flex
+                justify-content: space-between
+                // border-bottom: 1px solid #ddd
+                box-shadow: 0 1px 10px 0px rgba(0, 0, 0, 0.15)
+                padding: 10px
+                border-radius: 5px
+                background: #fff
+                align-items: center
+                p
+                    margin: 0
+                .icons
+                    display: flex
+                    gap: 10px
+                    cursor: pointer
+                    .edit
+                        color: $blue-color
+                    .del
+                        color: $red-color
+            .task.done
+                color: #ccc
+                text-decoration: line-through
+                text-decoration-color: currentcolor
+                text-decoration-color: #3B71CA66
+        .edit-box
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%,-50%)
+            background: #fff
+            padding: 20px
+            box-shadow: 0 0 4px rgb(0, 0, 0)
+            width: 50%
+            transition: 0.5s
+            display: none
+            input
+                width: 100%
+                padding: 10px
+@import media
